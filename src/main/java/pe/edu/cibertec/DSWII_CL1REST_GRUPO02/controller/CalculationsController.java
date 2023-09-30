@@ -37,6 +37,15 @@ public class CalculationsController {
         return segundos / 60.0;
     }
 
+    @GetMapping("/sumaSerie/{limite}")
+    public int sumaSerie(@PathVariable int limite) {
+        int suma = 0;
+        for (int i = 1; i <= limite; i++) {
+            suma += i;
+        }
+        return suma;
+    }
+
 
 }
 
