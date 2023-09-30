@@ -46,6 +46,16 @@ public class CalculationsController {
         return suma;
     }
 
+    @GetMapping("/cuadradoMitad/{inicio}/{fin}")
+    public String cuadradoMitad(@PathVariable int inicio, @PathVariable int fin) {
+        StringBuilder resultado = new StringBuilder();
+        for (int i = inicio; i <= fin; i++) {
+            double cuadrado = i * i;
+            double mitad = i / 2.0;
+            resultado.append("Número: ").append(i).append(", Cuadrado: ").append(cuadrado).append(", Mitad: ").append(mitad).append("\n");
+        }
+        return resultado.toString();
+    }
 
 }
 
