@@ -32,5 +32,11 @@ public class CalculationsController {
         return promedio;
     }
 
+    @GetMapping("/segundosAMinutos/{segundos}")
+    public double segundosAMinutos(@PathVariable int segundos) {
+        return segundos / 60.0;
+    }
+
+
 }
 
